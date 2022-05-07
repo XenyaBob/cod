@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+      {% if title %}
+      <title>{{ title }}Organize ur life</title>
+      {% else %}
+      <title>Welcome to app!</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Menu: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
